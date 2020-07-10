@@ -1,6 +1,39 @@
-<h1>User Sign in</h1>
-<form action="/users/create-session" method="POST">
-    <input type="email" name="email" placeholder="Your email" required>
-    <input type="password" name="password" placeholder="Your password" required>
-    <input type="submit" value="Sign In" required>
-</form>
+
+
+
+<div style="display: flex;justify-content: center;" >
+    <div style="display: flex ">
+
+    <div style="width: 60%;">
+            <h1 style="font-size: 60px; text-align: center;">
+                Login Page
+                <i class="fas fa-sign-in-alt"></i>
+            </h1>
+    <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/user-login-password-1939034-1641558.png">
+</div>
+
+
+    <div  style=" display:inline-flexbox;margin-top: 15%; margin-right: 200px;  ">
+        
+        <form action="/users/create-session" method="POST">
+            
+                
+    <input type="email" name="email" placeholder="Your email" required style="font-size: 20px;height: 40px;width: 300px;" ><br/><br/>
+    <input type="password" name="password" placeholder="Your password" required style="font-size: 20px;height: 40px;width: 300px;"><br/><br/></br> </br>
+    <input type="submit" value="Login" required style="font-size: 20px; height: 60px; width: 100px; background-color: blue;color: white;"><br/><br/></br>
+    </form>
+    
+    <p>
+        <a href="/users/auth/google"> 
+            <img src="https://developers.google.com/identity/images/btn_google_signin_dark_normal_web.png"
+        </a>
+    </p>
+</div>
+</div>
+
+</div>
+
+<script src="https://kit.fontawesome.com/7035adf628.js" crossorigin="anonymous"></script>
+
+
+

@@ -1,10 +1,42 @@
-<h1>User Sign up</h1>
+<div style="display: flex;justify-content: center;" >
+    <div style="display: flex ">
+
+    <div style="width: 60%;">
+            <h1 style="font-size: 60px; text-align: center;">
+                Create an account
+                <i class="fas fa-user"></i>
+            </h1>
+    <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/user-login-password-1939034-1641558.png" >
+</div>
+
+
+    <div  style=" text-align: center;margin-top: 15%; margin-right: 35%;  ">
+        
 
 <form action="/users/create" method="POST">
-    <input type="text" name="name" placeholder="Your name" required>
-    <input type="email" name="email" placeholder="Your email" required>
-    <input type="password" name="password" placeholder="Your password" required>
-    <input type="password" name="confirm_password" placeholder="confirm_password" required>
-    <input type="submit" value="Sign Up" required>
+    <input type="text" name="name" placeholder="Your name" required style="font-size: 20px;height: 40px;width: 300px;" > <br/><br/>
+    <input type="email" name="email" placeholder="Your email" required style="font-size: 20px;height: 40px;width: 300px;" > <br/><br/>
+    <input type="password" name="password" placeholder="Your password" required style="font-size: 20px;height: 40px;width: 300px;" > <br/><br/>
+    <input type="password" name="confirm_password" placeholder="confirm_password" required style="font-size: 20px;height: 40px;width: 300px;" ><br/><br/>
+    <input type="submit" value="Sign Up" required style="font-size: 20px; height: 60px; width: 100px; background-color: blue;color: white;"><br/><br/></br>
 
 </form>
+
+<p>
+    <a href="/users/auth/google"> 
+        <img src="https://developers.google.com/identity/images/btn_google_signin_dark_normal_web.png"
+    </a>
+</p>
+<p>
+    <a href="/users/auth/github"> 
+        <img src="https://p.kindpng.com/picc/s/128-1280187_github-logo-png-github-transparent-png.png"
+    </a>
+
+</p>
+</div>
+</div>
+
+</div>
+
+<script src="https://kit.fontawesome.com/7035adf628.js" crossorigin="anonymous"></script>
+

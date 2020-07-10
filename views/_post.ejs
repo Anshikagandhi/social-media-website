@@ -1,0 +1,55 @@
+<li id="post-<%= post._id%>">
+        <p>
+          <% if(locals.user && locals.user.id==  post.user.id){%>
+            <small>
+                <a class="delete-post" href="/posts/destroy/<%= post.id %>"> 
+                  <i class="fas fa-trash-alt" style="font-size: 35px; color: red;"></i>
+                </a>
+              </small>
+
+          <%} %>
+          <small style="font-size: 35px;">
+         <%= post.content  %>
+          </small>
+      <br><br>
+      <small style="font-size: 25px;">
+          <%= post.user.name %>
+         
+      </small>
+      <br>
+      <small>
+        <% if (locals.user){ %>
+            <a class="toggle-like-button" data-likes="<%= post.likes.length %>" href="/likes/toggle/?id=<%=post._id%>&type=Post">
+                    <%= post.likes.length %> Likes
+            </a>
+        <% }else{ %>
+            <%= post.likes.length %> Likes
+        <% } %>
+    </small>
+
+
+    </p>
+    <div class="post-comments">
+      <% if(locals.user){ %>
+        <form action="/comments/create" method="POST">
+          <input type="text" name="content" placeholder="Type here to add comment.."  style="height: 50px; width: 200px; font-size: 15px;">
+          <input type="hidden" name="post" value="<%= post._id %>">
+          <input type="submit"  value="Add" style="width: 50px; height: 50px;" >
+
+        </form>
+
+     <% }%>
+     <div class="post-comments-list">
+       <ul >
+         <% for (comment of post.comments){ %>
+           <%- include('_comment')-%>
+         
+         <%} %>
+
+       </ul>
+
+     </div>
+
+    </div>
+    </li>
+    <script src="https://kit.fontawesome.com/7035adf628.js" crossorigin="anonymous"></script>
