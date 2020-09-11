@@ -22,12 +22,12 @@ const development={
         port:587,
         secure: false,
         auth:{
-            user:'anshikagandhi31',
-            pass:'anshika1!'
+            user:'randome352',
+            pass:'random12341!'
         }
     },
-    google_client_id:'1043263709655-nqtj19eugdtdsjbt9s4sqe6023bpjs0j.apps.googleusercontent.com',
-    google_client_secret:'BTClewgU4xDe92NVMbkg7hSa',
+    google_client_id:'1043263709655-nqtj19eugdtdsjbt9s4sqe6023b',
+    google_client_secret:'BTClewgU4xbkg7hSa',
     google_call_back_url:'http://localhost:8000/users/auth/google/callback',
     jwt_secret: 'codeial',
     morgan:{
